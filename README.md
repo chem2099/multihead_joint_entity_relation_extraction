@@ -12,6 +12,20 @@ Implementation of the papers
 * Tensorflow 1.5.0
 * PrettyTable 0.7.2
 
+# 项目名：
+## 对抗训练多头选择的实体识别和关系抽取的联合模型
+### （多头选择的实体识别和关系抽取的联合模型）
+
+---
+## 主流程：
+联合模型 先命名实体识别
+#### *训练模块
+1.数据加载  读取所有字符串;所以实体;
+'token_id', 'token', "BIO", "relation", 'head'
+为每个词生成 一个id 及一个50维度或者多少维度的向量  
+2.双向lstm抽取特征 每个词的字母表征用双向lstm提取出来 最后一个维度肯定是hidden_size
+
+---
 ## Task
 Given a sequence of tokens (i.e., sentence), (i) give the entity tag of each word (e.g., NER) and (ii) the relations between the entities in the sentence. The following example indicates the accepted input format of our multi-head selection model:
 
@@ -62,3 +76,8 @@ Giannis Bekoulis, Johannes Deleu, Thomas Demeester, Chris Develder. Joint entity
 
 Giannis Bekoulis, Johannes Deleu, Thomas Demeester, Chris Develder. Adversarial training for multi-context joint entity and relation extraction, In the Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), 2018
 
+吉安妮斯·贝考利斯、约翰内斯·德鲁、托马斯·德米斯特、克里斯·德维尔德。作为一个多头选择问题的联合实体识别和关系提取。专家系统与应用，第114卷，第34-45页，2018年
+
+
+
+吉安妮斯·贝考利斯、约翰内斯·德鲁、托马斯·德米斯特、克里斯·德维尔德。《自然语言处理经验方法会议记录》（EMNLP）中多语境联合实体和关系提取的对抗性培训，2018年
